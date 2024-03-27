@@ -46,5 +46,5 @@ def apply_datacube(cube: xr.DataArray, context: Dict) -> xr.DataArray:
 
     # Prepare the output
     output = output.reshape(cube.shape[1:])
-    return xr.DataArray(output)
+    return xr.DataArray(output).astype("uint8")
 
